@@ -11,6 +11,11 @@
   --animate-delay: 1s;
   --animate-repeat: 1;
 }
+.datepicker td,th{
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 14px;
+}
 .animate__animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;

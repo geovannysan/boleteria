@@ -12,9 +12,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximun-scalable=1.0, maximun-scalable=1.0">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 <link href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.css' rel='stylesheet'>
 <link href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.css' rel='stylesheet'>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/js/bootstrap-datepicker.js"></script>
+<script src="js/bootstrap-datepicker.es.js" charset="UTF-8"></script>
+
 <title>T-ickets | Compra tu boleto</title>
 <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
 
@@ -26,14 +34,7 @@
 <!-- Js WoW-->
 <script src="js/wow.min.js"></script>
 <script> new WOW().init();</script>
-<script>
-  
-  document.addEventListener('DOMContentLoaded', function() {
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-  themeSystem: 'bootstrap'
-});
-     });
-</script>
+
 </head>
 
 <body style="font-family: 'Quicksand', sans-serif;"><!--Inicio proyecto-->
@@ -212,14 +213,11 @@
                 </div>
               </div>
 
-
-              <div class="col-12 col-lg-3">
-                <div class="container my-5">
+                <div class="   col-lg-3 " style="height: 320px;">
+                <div class="container ">
                   <h1 style="font-size: 1.2em" class="fw-bold text-center">Calendario de Eventos</h1>
-                  <div class="col-12 bg-white rounded-7 shadow border border-2" style="height: 180px">
-                    <div id="calendario">
-
-                    </div>
+                  <div class="col-12 bg-white  rounded-7 shadow border border-2   d-flex justify-content-center">
+                    <div   id="datepicker" ></div>
 
                   </div>
                 </div>
@@ -230,6 +228,8 @@
           </div>
 
 
+  
+
 
 
 
@@ -237,6 +237,23 @@
 
 <!--Fin proyecto-->
 <!--Js-->
+<script type="text/javascript">
+
+  $("#datepicker").datepicker({
+
+    startView:1,
+    language: 'es'
+ /* changeMonth: true,
+             changeYear: true,
+             
+             format: " m-yyyy",
+  viewMode: "months",
+  minViewMode: "months"*/
+    
+});
+
+            
+</script>
 <script src="js/bootstrap.bundle.js"></script>
 <script src="js/wow.min.js"></script>
 </body>
